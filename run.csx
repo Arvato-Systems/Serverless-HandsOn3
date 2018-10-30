@@ -1,4 +1,4 @@
-#r "Newtonsoft.Json"
+=#r "Newtonsoft.Json"
 #r "Microsoft.WindowsAzure.Storage"
 #load "json.csx"
 #load "jobItem.csx"
@@ -60,5 +60,5 @@ public static bool EntityExists(string partitionKey, string rowKey, CloudTable t
             TableOperation retrieveOperation = TableOperation.Retrieve<JobItem>(partitionKey, rowKey);
             var retrievedResult = table.ExecuteAsync(retrieveOperation);
             
-            return (retrievedResult.Result != null)? true: false;
+            return (retrievedResult.Result == null)? true: false;
 }
