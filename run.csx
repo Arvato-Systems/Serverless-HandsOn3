@@ -1,4 +1,4 @@
-=#r "Newtonsoft.Json"
+#r "Newtonsoft.Json"
 #r "Microsoft.WindowsAzure.Storage"
 #load "json.csx"
 #load "jobItem.csx"
